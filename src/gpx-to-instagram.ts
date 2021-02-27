@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { parse } from 'fast-xml-parser';
 import { existsSync, readFileSync, writeFileSync } from 'fs';
 import { createCanvas, loadImage } from 'canvas';
@@ -39,7 +41,9 @@ async function main(params: GpxToInstagramParams): Promise<void> {
 
     console.log('Reading image file', params.i);
     const image = await loadImage(params.i);
-    const logo = await loadImage('./strava_symbol_white.png');
+    const logo = await loadImage(
+       join(__dirname, 'strava_symbol_white.png')
+    );
 
     const {width: imageWidth, height: imageHeight} = image;
     const width = Math.min(imageWidth, imageHeight);
@@ -311,7 +315,7 @@ async function main(params: GpxToInstagramParams): Promise<void> {
 
 import yargs from 'yargs'
 import { hideBin } from 'yargs/helpers'
-import { extname } from 'path';
+import { extname, join } from 'path';
 import { GpxToInstagramParams } from './types/gpx-params';
 import { distanceInMeters, mercatorProjection } from './utils';
 

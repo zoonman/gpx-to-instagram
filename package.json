@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "private": true,
-  "main": "src/gpx-to-instagram.js",
+  "main": "dist/gpx-to-instagram.js",
   "bin": {
-    "gpx-to-instagram": "gpx-to-instagram.js"
+    "gpx-to-instagram": "dist/gpx-to-instagram.js",
+    "gpx2instagram": "dist/gpx-to-instagram.js"
   },
   "scripts": {
     "start": "ts-node src/gpx-to-instagram.ts",
-    "prepare": "tsc -p .",
+    "prepare": "tsc -p . && cp src/strava_symbol_white.png dist/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
