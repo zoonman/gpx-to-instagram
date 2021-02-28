@@ -1,6 +1,6 @@
 {
   "name": "gpx-to-instagram",
-  "version": "1.0.1-1",
+  "version": "1.0.1",
   "description": "Plots GPX track from Strava to an supplied image.\n",
   "private": false,
   "main": "dist/gpx-to-instagram.js",
