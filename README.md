@@ -33,6 +33,14 @@ Options:
   -h, --help     Show help                                             [boolean]
 ```
 
+### Fonts
+
+Make sure that you have the following fonts installed:
+
+ - DIN Alternate
+ - DIN Condensed
+ - SF UI Display
+
 ###### Disclaimer
 
 Distribution includes Strava logo. It belongs to Strava. 
