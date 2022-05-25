@@ -276,7 +276,7 @@ export async function main(params: GpxToInstagramParams): Promise<void> {
     const t0 = Date.parse(protp[0].time);
     const t1 = Date.parse(protp[protp.length - 1].time);
     const sec = (t1 - t0) / 1000;
-    const hrs = Math.round(sec / 3600).toFixed(0);
+    const hrs = Math.floor(sec / 3600).toFixed(0);
     const min = (sec / 60 % 60).toFixed();
 
     const ts = sec / 3600 > 1.0 ? `${ hrs }h${ min }` : `${ min }`;
